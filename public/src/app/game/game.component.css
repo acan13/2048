@@ -1,0 +1,25 @@
+#gameBox, #right{
+  display: inline-block;
+}
+
+#right{
+  vertical-align: bottom;
+  height: 687px;
+  padding-top: 68px;
+  text-align: left;
+}
+
+#gameBox{
+}
+
+
+
+h1{
+  color: white;
+  font-size: 65px;
+  margin: 10px;
+}
+
+#wrapper{
+  text-align: center;
+}

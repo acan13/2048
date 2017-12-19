@@ -1,0 +1,10 @@
+<table (onkeypress)="onKeyPress()">
+  <tr *ngFor="let row of board">
+    <td *ngFor="let item of row" [ngStyle]="{'background-color':colors(item)}">
+      {{ item }}
+    </td>
+  </tr>
+
+
+
+</table>

@@ -1,0 +1,41 @@
+<div>
+  <h3>
+    High Score: {{ highScore.score }} | {{ highScore.userName }}
+  </h3>
+  <h3>Low Score: {{ lowScore.score }} | {{ lowScore.userName }}</h3>
+  <!-- <h3>Timed High Score: {{ timedHigh }}</h3> -->
+
+  <form #formData="ngForm" *ngIf="gameOver && newHigh && !newLow" (submit)="newHighSubmit()">
+    <input
+      type="text"
+      name="userName"
+      value=""
+      placeholder="Enter Your Name!"
+      [(ngModel)]="user.name"
+      #userName="ngModel">
+      <input type="hidden" name="records" value="high">
+    <input type="submit" name="submit" value="Submit!">
+  </form>
+  <form #formData="ngForm" *ngIf="newLow && !newHigh" (submit)="newLowSubmit()">
+    <input
+      type="text"
+      name="userName"
+      value=""
+      placeholder="Enter Your Name!"
+      [(ngModel)]="user.name"
+      #userName="ngModel">
+      <input type="hidden" name="records" value="low">
+    <input type="submit" name="submit" value="Submit!">
+  </form>
+  <form #formData="ngForm" *ngIf="newLow && newHigh" (submit)="newBothSubmit()">
+    <input
+      type="text"
+      name="userName"
+      value=""
+      placeholder="Enter Your Name!"
+      [(ngModel)]="user.name"
+      #userName="ngModel">
+      <input type="hidden" name="records" value="both">
+    <input type="submit" name="submit" value="Submit!">
+  </form>
+</div>
