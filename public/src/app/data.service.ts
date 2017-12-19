@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http'
-import { BehaviorSubject } from 'Rxjs'
+import { BehaviorSubject } from 'Rxjs/BehaviorSubject'
 
 @Injectable()
 export class DataService {

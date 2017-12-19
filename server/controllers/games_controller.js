@@ -19,12 +19,12 @@ module.exports = {
     session.score = 0
 
     //temporary
-    board = []
-    board.push([16, 2, 4, 2])
-    board.push([8, 64, 32, 16])
-    board.push([4, 8, 16, 2])
-    board.push([2, 32, 4, 2])
-    session.board = board
+    // board = []
+    // board.push([16, 2, 4, 2])
+    // board.push([8, 64, 32, 16])
+    // board.push([4, 8, 16, 2])
+    // board.push([2, 32, 4, 2])
+    // session.board = board
     //end temporary
     return res.json({
       board:session.board,
